@@ -1,6 +1,6 @@
 {
   "name": "@otl-core/cms-types",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "type": "module",
   "description": "Shared TypeScript types for OTL CMS",
   "main": "./dist/index.cjs",
