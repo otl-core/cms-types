@@ -1,0 +1,4 @@
+/**
+ * Header configuration types
+ */
+export {};
