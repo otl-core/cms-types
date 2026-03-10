@@ -91,6 +91,17 @@ export interface HeaderStyle {
     };
     padding: ResponsiveValue<string>;
     shadow?: ResponsiveValue<ShadowConfig>;
+    layer?: "above" | "below" | "same"; // Whether the dropdown renders in front of or behind the navbar, or shares the navbar container
+  };
+
+  fontSize?: {
+    navbar?: ResponsiveValue<string>; // Font size for navbar items (e.g., "1rem", "14px")
+    dropdown?: ResponsiveValue<string>; // Font size for dropdown items
+    buttonFontSize?: {
+      sm?: ResponsiveValue<string>;
+      md?: ResponsiveValue<string>;
+      lg?: ResponsiveValue<string>;
+    };
   };
 }
 
@@ -126,7 +137,7 @@ export type HeaderNavigationItemConfig =
   | HeaderNavigationItemMarkdownConfig
   | HeaderNavigationItemImageConfig;
 
-export interface HeaderNavigationItemLogoConfig {}
+export type HeaderNavigationItemLogoConfig = Record<string, never>;
 
 export interface HeaderNavigationItemLinkConfig {
   href: string;

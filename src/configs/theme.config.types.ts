@@ -1,4 +1,4 @@
-import { ColorReference } from "../responsive.types";
+import { ColorReference, ResponsiveValue } from "../responsive.types";
 import { TypographySettings } from "./font.config.types";
 
 /**
@@ -11,7 +11,8 @@ export interface ThemeConfig {
   light: ThemeSlots;
   dark: ThemeSlots;
   typography: TypographySettings;
-  radius: string;
+  radius: RadiusConfig;
+  containerPadding?: ResponsiveValue<string>;
   created_at: string;
   updated_at: string;
 }
@@ -33,6 +34,18 @@ export interface ThemeColor {
   name: string;
   light: ThemeColorMode;
   dark: ThemeColorMode;
+}
+
+/**
+ * Border radius configuration for the theme scale.
+ * Each tier maps to the corresponding Tailwind rounded-* utility.
+ */
+export interface RadiusConfig {
+  sm: string;
+  md: string;
+  lg: string;
+  xl: string;
+  full?: boolean;
 }
 
 /**
