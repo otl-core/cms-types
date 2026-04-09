@@ -23,8 +23,18 @@ export interface HeaderConfig {
     alt: string;
     url: string;
     text?: string;
-    width?: number;
-    height?: number;
+    /**
+     * CSS width for the logo image. Accepts a responsive value
+     * (e.g. `{ base: "120px", md: "160px" }`). Legacy numeric values
+     * (interpreted as pixels) are still accepted for backwards compat.
+     */
+    width?: ResponsiveValue<string> | number;
+    /**
+     * CSS height for the logo image. Accepts a responsive value
+     * (e.g. `{ base: "32px", md: "40px" }`). Legacy numeric values
+     * (interpreted as pixels) are still accepted for backwards compat.
+     */
+    height?: ResponsiveValue<string> | number;
   };
 
   togglerSectionId: string;
