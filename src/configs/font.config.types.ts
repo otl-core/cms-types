@@ -20,6 +20,8 @@ export interface Font {
   source: "google" | "custom";
   variants: string[];
   subsets?: string[];
+  /** CSS font-stretch keyword (e.g. "condensed", "expanded"). Omitted or "normal" for normal-width fonts. */
+  stretch?: string;
   files?: Record<string, string>;
 }
 
