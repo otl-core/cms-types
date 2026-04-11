@@ -47,10 +47,10 @@ export interface HeaderConfig {
 
 export interface HeaderStyle {
   type: "default" | "minimal";
-  position?: "static" | "fixed"; // Position behavior: static (normal flow) or fixed (sticky)
+  position?: "static" | "fixed"; // Position behavior: absolute (default) or fixed (sticky)
   container?: "boxed" | "edged" | "ignore"; // Container behavior: boxed (boxed in container), edged (full-width, edges constrained to container), ignore (full-width, no container constraint)
 
-  safeZone?: ResponsiveValue<string>; // Safe zone for the header (e.g., "3rem" area behind the header where no content can be placed).
+  safeZone?: ResponsiveValue<string>; // Spacer div below the header to prevent content overlap (e.g., "3rem").
 
   layout: {
     margin: ResponsiveValue<string>;
@@ -101,7 +101,7 @@ export interface HeaderStyle {
     };
     padding: ResponsiveValue<string>;
     shadow?: ResponsiveValue<ShadowConfig>;
-    layer?: "above" | "below" | "same"; // Whether the dropdown renders in front of or behind the navbar, or shares the navbar container
+    layer?: "above" | "below" | "same"; // Dropdown z-stacking: "above" (z-9999), "below" (default z), or "same" (shares navbar container)
   };
 
   fontSize?: {
