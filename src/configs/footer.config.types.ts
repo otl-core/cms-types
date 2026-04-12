@@ -64,6 +64,8 @@ export interface FooterSectionStyle {
     | "space-around";
   flex?: string; // e.g., "1", "0 1 auto"
   gap?: string; // e.g., "1rem", "24px"
+  wrap?: boolean; // Enable flex-wrap for responsive column wrapping
+  minWidth?: string; // Min width per child (e.g. "200px"), used with wrap
 
   // Visual styling (can override footer-level defaults)
   background?: ColorReference;
