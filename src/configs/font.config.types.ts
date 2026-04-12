@@ -1,3 +1,5 @@
+import type { ColorReference } from "../responsive.types";
+
 /**
  * Font configuration
  */
@@ -50,6 +52,7 @@ export interface FontAssignment {
   letterSpacing?: string;
   textTransform?: string;
   textDecoration?: string;
+  color?: ColorReference;
 
   // Text modifier overrides
   strong?: FontOverride;
@@ -71,4 +74,16 @@ export interface TypographySettings {
   blockquote?: FontAssignment;
   code?: FontAssignment;
   small?: FontAssignment;
+  link?: LinkTypography;
+}
+
+/**
+ * Link typography settings
+ */
+export interface LinkTypography {
+  color?: ColorReference;
+  hoverColor?: ColorReference;
+  textDecoration?: string;
+  hoverTextDecoration?: string;
+  fontWeight?: string;
 }
