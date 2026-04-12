@@ -61,4 +61,6 @@ export interface ThemeSlots {
   border: ColorReference;
   card: ColorReference;
   destructive: ColorReference;
+  warning?: ColorReference;
+  success?: ColorReference;
 }
