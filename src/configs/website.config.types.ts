@@ -75,6 +75,7 @@ export interface WebsiteConfig {
   organization?: OrganizationInfo;
   password_protection?: PasswordProtection;
   password_prompt_texts?: PasswordPromptTexts;
+  title_separator?: string;
   custom_fields?: Record<string, unknown>;
 
   // Social media
