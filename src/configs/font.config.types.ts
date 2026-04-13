@@ -64,6 +64,7 @@ export interface FontAssignment {
  * Typography settings for all text elements
  */
 export interface TypographySettings {
+  base?: FontAssignment;
   h1?: FontAssignment;
   h2?: FontAssignment;
   h3?: FontAssignment;
