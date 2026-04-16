@@ -154,4 +154,5 @@ export interface FormSubmissionResponse {
 
 export interface FormAdvancedOptions {
   rules: Rule[];
+  set_values?: Record<string, unknown>;
 }
