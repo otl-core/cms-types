@@ -19,7 +19,19 @@ export interface SectionBaseConfig {
   margin?: ResponsiveValue<string>;
 
   // VISUAL STYLING
-  color?: ColorReference; // Background+foreground color
+  color?: ResponsiveValue<ColorReference>; // Responsive background+foreground color
+  borderRadius?: ResponsiveValue<string>;
+
+  // DIMENSIONS (responsive, layout sections/blocks only)
+  width?: ResponsiveValue<string>;
+  minWidth?: ResponsiveValue<string>;
+  maxWidth?: ResponsiveValue<string>;
+  height?: ResponsiveValue<string>;
+  minHeight?: ResponsiveValue<string>;
+  maxHeight?: ResponsiveValue<string>;
+
+  // ALIGNMENT
+  verticalAlign?: ResponsiveValue<string>;
 }
 
 export interface SectionComponentProps<TConfig = Record<string, unknown>> {
